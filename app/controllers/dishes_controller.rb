@@ -10,7 +10,7 @@ class DishesController < ApplicationController
   # GET /dishes/1
   # GET /dishes/1.json
   def show
-    # display all items in menu format
+    redirect_to edit_dish_path
   end
 
   # GET /dishes/new
