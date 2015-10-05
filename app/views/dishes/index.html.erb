@@ -4,12 +4,13 @@
 <h2>Eat the most delicious food at Foodland!</h2>
 <h3>Menu</h3>
 <h4>Breakfast</h4>
+<%= link_to 'New Breakfast', new_dish_path(course_id: 1) %>
 <table>
   <tbody>
     <% @dishes.each do |dish| %>
     <% if dish.course_id == 1 %>
       <tr>
-        <td><%= dish.name %></td>
+        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
         <td><%= dish.price %></td>
         <td><%= dish.description %>
       </tr>
@@ -18,12 +19,13 @@
   </tbody>
 </table>
 <h4>Lunch</h4>
+<%= link_to 'New Lunch', new_dish_path(course_id: 2) %>
 <table>
   <tbody>
     <% @dishes.each do |dish| %>
     <% if dish.course_id == 2 %>
       <tr>
-        <td><%= dish.name %></td>
+        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
         <td><%= dish.price %></td>
         <td><%= dish.description %>
       </tr>
@@ -32,12 +34,13 @@
   </tbody>
 </table>
 <h4>Dinner</h4>
+<%= link_to 'New Dinner', new_dish_path(course_id: 3) %>
 <table>
   <tbody>
     <% @dishes.each do |dish| %>
     <% if dish.course_id == 3 %>
       <tr>
-        <td><%= dish.name %></td>
+        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
         <td><%= dish.price %></td>
         <td><%= dish.description %>
       </tr>
