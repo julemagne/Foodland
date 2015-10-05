@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Pancakes
+  course_id: 1
+  price: 9.99
+  description: Pancake time
+
+two:
+  name: Sandwich
+  course_id: 2
+  price: 9.99
+  description: Delicious sandwich
+
+three:
+  name: Steak
+  course_id: 3
+  price: 19.99
+  description: Well done

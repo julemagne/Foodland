@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foodland</h1>
+<h2>Eat the most delicious food at Foodland!</h2>
+<h3>Menu</h3>
+<h4>Breakfast</h4>
+<table>
+  <tbody>
+    <% @dishes.each do |dish| %>
+    <% if dish.course_id == 1 %>
+      <tr>
+        <td><%= dish.name %></td>
+        <td><%= dish.price %></td>
+        <td><%= dish.description %>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<h4>Lunch</h4>
+<table>
+  <tbody>
+    <% @dishes.each do |dish| %>
+    <% if dish.course_id == 2 %>
+      <tr>
+        <td><%= dish.name %></td>
+        <td><%= dish.price %></td>
+        <td><%= dish.description %>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<h4>Dinner</h4>
+<table>
+  <tbody>
+    <% @dishes.each do |dish| %>
+    <% if dish.course_id == 3 %>
+      <tr>
+        <td><%= dish.name %></td>
+        <td><%= dish.price %></td>
+        <td><%= dish.description %>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Courses</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dishes.each do |dish| %>
+      <tr>
+        <td><%= dish.name %></td>
+        <td><%= dish.course.name %></td>
+        <td><%= dish.price %></td>
+        <td><%= dish.description %></td>
+        <td><%= link_to 'Show', dish %></td>
+        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dish', new_dish_path %>
+<%= link_to 'Home', root_path %>
