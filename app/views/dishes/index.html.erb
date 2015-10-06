@@ -23,7 +23,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= number_to_currency(dish.price) %></span>
+                <%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="clear"></div>
-      <div class="pic"><%= image_tag asset_url("lunch"), class: "pic", alt: "Lunch" %></div>
+      <div class="pic"><%= image_tag asset_url("lunch.png"), class: "pic", alt: "Lunch" %></div>
       <div class="section">
         <h4>Lunch</h4>
         <p>
@@ -47,7 +47,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= number_to_currency(dish.price) %></span>
+                <%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
@@ -59,7 +59,7 @@
       </div>
 
       <div class="clear"></div>
-      <div class="pic"><%= image_tag asset_url("dinner"), class: "pic", alt: "Dinner" %></div>
+      <div class="pic"><%= image_tag asset_url("dinner.png"), class: "pic", alt: "Dinner" %></div>
       <div class="section">
         <h4>Dinner</h4>
         <p>
@@ -71,7 +71,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= number_to_currency(dish.price) %></span>
+                <%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
