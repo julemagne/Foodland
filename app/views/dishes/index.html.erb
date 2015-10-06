@@ -11,7 +11,7 @@
       </div>
       <div class="undernav">
         <h3>Menu</h3>
-          <div class="pic"><%= image_tag asset_url("breakfast"), class: "pic" %></div>
+          <div class="pic"><%= image_tag asset_url("breakfast"), class: "pic", alt: "Breakfast" %></div>
           <div class="section">
           <h4>Breakfast</h4>
             <p><span class="os"><%= link_to 'Open Source my Breakfast!', new_dish_path(course_id: 1) %></span></p>
@@ -28,7 +28,7 @@
           </div>
 
         <div class="clear"></div>
-        <div class="pic"><%= image_tag asset_url("lunch"), class: "pic" %></div>
+        <div class="pic"><%= image_tag asset_url("lunch"), class: "pic", alt: "Lunch" %></div>
         <div class="section">
         <h4>Lunch</h4>
         <p><span class="os"><%= link_to 'Open Source my Lunch!', new_dish_path(course_id: 2) %></span></p>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="clear"></div>
-        <div class="pic"><%= image_tag asset_url("dinner"), class: "pic" %></div>
+        <div class="pic"><%= image_tag asset_url("dinner"), class: "pic", alt: "Dinner" %></div>
         <div class="section">
         <h4>Dinner</h4>
         <p><span class="os"><%= link_to 'Open Source my Dinner!', new_dish_path(course_id: 3) %></span></p>
@@ -60,6 +60,10 @@
             <% end %>
           </div>
         </div>
+        <div class="footer">
+          <p><%= link_to "Created by Julie David 2015", "http://github.com/julemagne/" %></p>
+        </div>
       </div>
+
     </body>
 </html>

@@ -97,7 +97,7 @@ h4 {
   margin: 0px;
   padding: 3px;
   border: $border-color solid 1px;
-  border-radius: 7px;
+  border-radius: 8px;
   text-align: center;
   font-family: $font-arial;
   line-height: 62px;
@@ -132,4 +132,18 @@ p {
 a {
   color: $primary-color;
   text-decoration: none;
+}
+
+.footer {
+  margin-top: 10px;
+  border-top: 1px solid $border-color;
+  display: inline-block;
+  width: 1000px;
+  p {
+    color: $primary-color;
+    font: $font-arial;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
