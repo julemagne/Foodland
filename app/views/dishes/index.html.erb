@@ -1,80 +1,65 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foodland</title>
+  </head>
+    <body>
+      <p id="notice"><%= notice %></p>
+      <div class="navbar">
+        <h1>Foodland</h1>
+        <h2>Eat the most delicious food at Foodland!</h2>
+      </div>
+      <div class="undernav">
+        <h3>Menu</h3>
+          <div class="pic"><%= image_tag asset_url("breakfast"), class: "pic" %></div>
+          <div class="section">
+          <h4>Breakfast</h4>
+            <p><span class="os"><%= link_to 'Open Source my Breakfast!', new_dish_path(course_id: 1) %></span></p>
+              <div class="menu-items">
+                <% @dishes.each do |dish| %>
+                <% if dish.course_id == 1 %>
+                  <p>
+                    <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
+                    <p><span class="desc"><%= dish.description %></p></span>
+                  </p>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
 
-<h1>Foodland</h1>
-<h2>Eat the most delicious food at Foodland!</h2>
-<h3>Menu</h3>
-<h4>Breakfast</h4>
-<%= link_to 'New Breakfast', new_dish_path(course_id: 1) %>
-<table>
-  <tbody>
-    <% @dishes.each do |dish| %>
-    <% if dish.course_id == 1 %>
-      <tr>
-        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
-        <td><%= dish.price %></td>
-        <td><%= dish.description %>
-      </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<h4>Lunch</h4>
-<%= link_to 'New Lunch', new_dish_path(course_id: 2) %>
-<table>
-  <tbody>
-    <% @dishes.each do |dish| %>
-    <% if dish.course_id == 2 %>
-      <tr>
-        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
-        <td><%= dish.price %></td>
-        <td><%= dish.description %>
-      </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<h4>Dinner</h4>
-<%= link_to 'New Dinner', new_dish_path(course_id: 3) %>
-<table>
-  <tbody>
-    <% @dishes.each do |dish| %>
-    <% if dish.course_id == 3 %>
-      <tr>
-        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
-        <td><%= dish.price %></td>
-        <td><%= dish.description %>
-      </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Courses</th>
-      <th>Price</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <div class="clear"></div>
+        <div class="pic"><%= image_tag asset_url("lunch"), class: "pic" %></div>
+        <div class="section">
+        <h4>Lunch</h4>
+        <p><span class="os"><%= link_to 'Open Source my Lunch!', new_dish_path(course_id: 2) %></span></p>
+          <div class="menu-items">
+            <% @dishes.each do |dish| %>
+            <% if dish.course_id == 2 %>
+              <p>
+                <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
+                <p><span class="desc"><%= dish.description %></p></span>
+              </p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
 
-  <tbody>
-    <% @dishes.each do |dish| %>
-      <tr>
-        <td><%= dish.name %></td>
-        <td><%= dish.course.name %></td>
-        <td><%= dish.price %></td>
-        <td><%= dish.description %></td>
-        <td><%= link_to 'Show', dish %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Dish', new_dish_path %>
-<%= link_to 'Home', root_path %>
+        <div class="clear"></div>
+        <div class="pic"><%= image_tag asset_url("dinner"), class: "pic" %></div>
+        <div class="section">
+        <h4>Dinner</h4>
+        <p><span class="os"><%= link_to 'Open Source my Dinner!', new_dish_path(course_id: 3) %></span></p>
+          <div class="menu-items">
+            <% @dishes.each do |dish| %>
+            <% if dish.course_id == 3 %>
+              <p>
+                <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
+                <p><span class="desc"><%= dish.description %></p></span>
+              </p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

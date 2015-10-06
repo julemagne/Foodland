@@ -13,6 +13,123 @@
  *= require_tree .
  *= require_self
  */
+ $font-arial:    Arial, sans-serif;
+ $background-color: #F5FAFF;
+ $navbar-color: #FDFEFF;
+ $primary-color: #6599CF;
+ $secondary-color: #9BC4EE;
+ $border-color: #C4C8CC;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.navbar {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: $navbar-color;
+  padding-left: 50px;
+  border-bottom: 1px solid $border-color;
+  overflow-x: hidden;
+}
+
+.undernav {
+  width: 1000px;
+  margin: auto;
+  background-color: #F7FBFF;
+}
+
+h1 {
+  font-family: futura;
+  color: $primary-color;
+  font-size: 50px;
+  font-style: italic;
+}
+
+h2 {
+  font-weight: 100;
+  font-family: $font-arial;
+  color: $secondary-color;
+}
+
+h3 {
+  font-weight: 100;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  line-height: 50px;
+  font-family: futura;
+  color: $primary-color;
+  font-size: 30px;
+  border-bottom: 1px solid #E5F0FA;
+}
+
+h4 {
+  font-family: futura;
+  border-bottom: 1px solid  #E5F0FA;
+  color: $primary-color;
+  font-size: 23px;
+  font-weight: 100;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.pic {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.section {
+  padding-left: 25px;
+  padding-top: 10px;
+  display: inline-block;
+}
+
+.clear {
+  display: inline-block;
+  width: 1000px;
+}
+
+.os {
+  margin: 0px;
+  padding: 3px;
+  border: $border-color solid 1px;
+  border-radius: 7px;
+  text-align: center;
+  font-family: $font-arial;
+  line-height: 62px;
+  font-weight: 900;
+  background-color: white;
+  box-shadow: inset 0px 10px 0px 0px #E5F0FA,
+  }
+
+.menu-items {
+  padding-bottom: 25px;
+  p {
+      font-family: $font-arial;
+      line-height: 20px;
+    }
+  }
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.word-space {
+  word-spacing: 10px;
+}
+
+.desc {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #939699;
+}
+
 a {
+  color: $primary-color;
   text-decoration: none;
 }
