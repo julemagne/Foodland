@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <% if !params[:id] %>
+    <% if !params[:course_id] %>
     <%= f.label :course_id %><br>
     <%= f.number_field :course_id %>
     <% end %>
