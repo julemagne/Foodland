@@ -23,7 +23,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= dish.price %></span>
+                $<%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
@@ -47,7 +47,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= dish.price %></span>
+                $<%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
@@ -71,7 +71,7 @@
           <p>
             <p>
               <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
-                $<%= dish.price %></span>
+                $<%= number_to_currency(dish.price) %></span>
             </p>
             <p>
               <span class="desc"><%= dish.description %></p>
