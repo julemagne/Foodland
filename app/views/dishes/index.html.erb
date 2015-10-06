@@ -3,67 +3,88 @@
   <head>
     <title>Foodland</title>
   </head>
-    <body>
-      <p id="notice"><%= notice %></p>
-      <div class="navbar">
-        <h1>Foodland</h1>
-        <h2>Eat the most delicious food at Foodland!</h2>
+  <body>
+    <p id="notice"><%= notice %></p>
+    <div class="navbar">
+      <h1>Foodland</h1>
+      <h2>Eat the most delicious food at Foodland!</h2>
+    </div>
+    <div class="undernav">
+      <h3>Menu</h3>
+      <div class="pic"><%= image_tag asset_url("breakfast"), class: "pic", alt: "Breakfast" %></div>
+      <div class="section">
+        <h4>Breakfast</h4>
+        <p>
+          <span class="os"><%= link_to 'Open Source my Breakfast!', new_dish_path(course_id: 1) %></span>
+        </p>
+        <div class="menu-items">
+          <% @dishes.each do |dish| %>
+          <% if dish.course_id == 1 %>
+          <p>
+            <p>
+              <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
+                $<%= dish.price %></span>
+            </p>
+            <p>
+              <span class="desc"><%= dish.description %></p>
+            </span>
+          </p>
+          <% end %>
+          <% end %>
+        </div>
       </div>
-      <div class="undernav">
-        <h3>Menu</h3>
-          <div class="pic"><%= image_tag asset_url("breakfast"), class: "pic", alt: "Breakfast" %></div>
-          <div class="section">
-          <h4>Breakfast</h4>
-            <p><span class="os"><%= link_to 'Open Source my Breakfast!', new_dish_path(course_id: 1) %></span></p>
-              <div class="menu-items">
-                <% @dishes.each do |dish| %>
-                <% if dish.course_id == 1 %>
-                  <p>
-                    <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
-                    <p><span class="desc"><%= dish.description %></p></span>
-                  </p>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
 
-        <div class="clear"></div>
-        <div class="pic"><%= image_tag asset_url("lunch"), class: "pic", alt: "Lunch" %></div>
-        <div class="section">
+      <div class="clear"></div>
+      <div class="pic"><%= image_tag asset_url("lunch"), class: "pic", alt: "Lunch" %></div>
+      <div class="section">
         <h4>Lunch</h4>
-        <p><span class="os"><%= link_to 'Open Source my Lunch!', new_dish_path(course_id: 2) %></span></p>
-          <div class="menu-items">
-            <% @dishes.each do |dish| %>
-            <% if dish.course_id == 2 %>
-              <p>
-                <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
-                <p><span class="desc"><%= dish.description %></p></span>
-              </p>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-        <div class="pic"><%= image_tag asset_url("dinner"), class: "pic", alt: "Dinner" %></div>
-        <div class="section">
-        <h4>Dinner</h4>
-        <p><span class="os"><%= link_to 'Open Source my Dinner!', new_dish_path(course_id: 3) %></span></p>
-          <div class="menu-items">
-            <% @dishes.each do |dish| %>
-            <% if dish.course_id == 3 %>
-              <p>
-                <p><span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %> $<%= dish.price %></span></p>
-                <p><span class="desc"><%= dish.description %></p></span>
-              </p>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-        <div class="footer">
-          <p><%= link_to "Created by Julie David 2015", "http://github.com/julemagne/" %></p>
+        <p>
+          <span class="os"><%= link_to 'Open Source my Lunch!', new_dish_path(course_id: 2) %></span>
+        </p>
+        <div class="menu-items">
+          <% @dishes.each do |dish| %>
+          <% if dish.course_id == 2 %>
+          <p>
+            <p>
+              <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
+                $<%= dish.price %></span>
+            </p>
+            <p>
+              <span class="desc"><%= dish.description %></p>
+            </span>
+          </p>
+          <% end %>
+          <% end %>
         </div>
       </div>
 
-    </body>
+      <div class="clear"></div>
+      <div class="pic"><%= image_tag asset_url("dinner"), class: "pic", alt: "Dinner" %></div>
+      <div class="section">
+        <h4>Dinner</h4>
+        <p>
+          <span class="os"><%= link_to 'Open Source my Dinner!', new_dish_path(course_id: 3) %></span>
+        </p>
+        <div class="menu-items">
+          <% @dishes.each do |dish| %>
+          <% if dish.course_id == 3 %>
+          <p>
+            <p>
+              <span class="word-space"><%= link_to dish.name, edit_dish_path(dish) %>
+                $<%= dish.price %></span>
+            </p>
+            <p>
+              <span class="desc"><%= dish.description %></p>
+            </span>
+          </p>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="footer">
+        <p><%= link_to "Created by Julie David 2015", "http://github.com/julemagne/" %></p>
+      </div>
+    </div>
+
+  </body>
 </html>
